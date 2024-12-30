@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Descubre los beneficios de las Esencias Florales de Bach y encuentra el equilibrio emocional que necesitas.">
+    <meta name="keywords" content="Esencias Florales de Bach, equilibrio emocional, terapias naturales, Agrimony, Aspen, Beech">
+    <meta name="author" content="Tu Nombre">
+    <title>Inicio | Esencias Florales de Bach</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #e8f9f8;
+            color: #333;
+        }
+
+        header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 15px 20px;
+            background-color: #009688;
+            color: white;
+        }
+
+        header img {
+            height: 100px;
+        }
+
+        header nav a {
+            margin: 0 10px;
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+        }
+
+        header nav a:hover {
+            text-decoration: underline;
+        }
+
+        .hero {
+            height: 300px;
+            background: url('hero-image.jpg') no-repeat center center/cover;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+        }
+
+        .products {
+            display: flex;
+            justify-content: space-around;
+            padding: 20px;
+        }
+
+        .product {
+            text-align: center;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            padding: 10px;
+            background-color: white;
+            width: 30%;
+            transition: transform 0.3s;
+        }
+
+        .product img {
+            width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+
+        .product:hover {
+            transform: scale(1.05);
+        }
+
+        .product button {
+            background-color: #009688;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .product button:hover {
+            background-color: #00796b;
+        }
+
+        footer {
+            background-color: #009688;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+        }
+
+        footer a {
+            color: white;
+            margin: 0 10px;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="imagenes/logo.jpeg" alt="Logo">
+        <nav>
+    
+            <a href="esencias.html">Esencias</a>
+            <a href="testimonios.html">Testimonios</a>
+            <a href="contacto.html">Contacto</a>
+        </nav>
+    </header>
+
+    <div class="hero">
+        <h1>Bienvenido a las Esencias Florales de Bach</h1>
+    </div>
+
+    <main>
+        <section style="padding: 20px; text-align: center;">
+            <h2>Reseña de nuestras Esencias Florales</h2>
+            <p>Las Esencias Florales de Bach son un método natural para equilibrar las emociones y mejorar el bienestar. Estas esencias, derivadas de flores seleccionadas, están diseñadas para aliviar el estrés, la ansiedad y otros desequilibrios emocionales. Descubre cómo cada esencia puede ayudarte a vivir una vida más armoniosa y saludable.</p>
+        </section>
+
+        <h2 style="text-align:center; padding:20px;">Productos Destacados</h2>
+        <div class="products">
+            <div class="product">
+                <img src="imagenes/varias unidades recipiente azul.jpeg" alt="Esencia Floral Agrimony">
+                <h3> Estrés</h3>
+                <p>Alivia la tensión diaria y promueve la calma en momentos de presión. Ideal para restaurar el equilibrio emocional en situaciones de alta demanda.</p>
+                <p>Precio: Bs. 150</p>
+                <button onclick="addToCart('Estrés', 150)">Agregar al Carrito</button>
+            </div>
+            <div class="product">
+                <img src="imagenes/varias unidades recipiente azul.jpeg" alt="Esencia Floral Aspen">
+                <h3>Ansiedad</h3>
+                <p>Libera tu mente de pensamientos repetitivos e intrusivos, ayudándote a encontrar claridad y serenidad interior. Perfecto para quienes buscan paz mental.</p>
+                <p>Precio: Bs. 150</p>
+                <button onclick="addToCart('Ansiedad', 150)">Agregar al Carrito</button>
+            </div>
+            <div class="product">
+                <img src="imagenes/varias unidades recipiente azul.jpeg" alt="Esencia Floral Beech">
+                <h3>Miedo o Fracaso</h3>
+                <p>Supera tus temores y recupera la confianza en ti mismo. Ayuda a enfrentar desafíos con valentía y optimismo.</p>
+                <p>Precio: Bs. 150</p>
+                <button onclick="addToCart('Miedo o Fracaso', 150)">Agregar al Carrito</button>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>Contactos: <a href="https://wa.me/59163382312" target="_blank">WhatsApp</a> | <a href="https://www.facebook.com/profile.php?id=61570937504991">Facebook</a> | <a href="https://www.instagram.com/carolamansillafloresde/profilecard/?igsh=MTlueTh3eG5jMWMxYQ==">Instagram</a> | <a href="https://www.tiktok.com/@carolamansillafl?_t=8sbcEDMrB14&_r=1">TikTok</a></p>
+    </footer>
+
+    <script>
+        function addToCart(product, price) {
+            const message = `He agregado al carrito: ${product}, Precio: Bs. ${price}`;
+            window.open(`https://wa.me/59163382312?text=${encodeURIComponent(message)}`, '_blank');
+        }
+    </script>
+</body>
+</html>
+
+
